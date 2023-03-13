@@ -31,7 +31,7 @@ SELECT marca AS database2, SUM(vendas) AS database1, SUM((vendas * valor)) as da
 FROM database2, database1
 WHERE database1.id_marca = database2.id_marca
 GROUP by marca
-ORDER BY SUM(vendas) DESC;
+ORDER BY SUM((vendas * valor)) DESC;
 
 SELECT nome as database1, valor as database1, sum(vendas) as database1 
 FROM database1
